@@ -25,6 +25,8 @@ let addTask = () => {
     } else {
         let inputVal = input.value.trim()
         let realInput = createTask(inputVal)
+        realInput.innerHTML += ` <span class='closedBtn'>   <i class="fa-solid fa-trash-can"></i>
+        </span>`
         ul.appendChild(realInput)
         input.value = '';
 
@@ -34,5 +36,5 @@ let addTask = () => {
 button.addEventListener('click', addTask)
 
 input.addEventListener('click', () => {
-    
+
 })

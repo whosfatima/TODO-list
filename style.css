@@ -42,7 +42,8 @@ button:hover {
 
 ul {
     list-style-type: none;
-    padding: 20px;
+    /* padding: 20px; */
+    position: relative;
 }
 
 ul>li {
@@ -53,6 +54,26 @@ ul>li {
     cursor: pointer;
     user-select: none;
 }
+
+.closedBtn {
+        position: absolute;
+    right: 25px;
+    display: none;
+}
+ul> li:hover > .closedBtn{
+    display: inline-block;
+}
+
+ul>li>span>i {
+    /* text-align: center; */
+
+    color: #000;
+    /* padding: 20px; */
+}
+ul >li > .closedBtn:hover > i {
+    color: red;
+}
+
 
 /* fieldset {
     all: unset;
