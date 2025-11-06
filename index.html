@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h2>simple todo list</h2>
-    <input type="text" autocomplete="off" placeholder="tell me about ur plan ...">
-    <button type="button">add</button>
-    <ul>
-    
-    </ul>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="child">
+        <h2>simple todo list</h2>
+        <input
+          class="input"
+          type="text"
+          autocomplete="off"
+          placeholder="tell me about ur plan ..."
+        />
+        <button type="button">add</button>
+      </div>
+      <ul></ul>
+    </div>
+    <!-- <div>
+      <fieldset>
+        <legend>okay hi</legend>
+        <input
+          type="text"
+          autocomplete="off"
+          placeholder="tell me about ur plan ..."
+        />
+      </fieldset>
+    </div> -->
     <script src="./script.js">
 
-        let input= document.querySelector('input')
-let button= document.querySelector('button')
-let ul= document.querySelector('ul')
+      //         let input= document.querySelector('input')
+      // let button= document.querySelector('button')
+      // let ul= document.querySelector('ul')
 
-let addTask= (text) => {
-    let li= document.createElement('li')
-    li.textContent= text
-    return li
-}
-// button.onclick= () => {
-//     let inputVal= input.value
-//     let realInput= addTask(inputVal)
-//     ul.appendChild(realInput)
-//     input.value ='';
-// }
-button.addEventListener('click', () => {
-    let inputVal= input.value
-    let realInput= addTask(inputVal)
-    ul.appendChild(realInput)
-    input.value ='';
-})
+      // let addTask= (text) => {
+      //     let li= document.createElement('li')
+      //     li.textContent= text
+      //     return li
+      // }
+      // // button.onclick= () => {
+      // //     let inputVal= input.value
+      // //     let realInput= addTask(inputVal)
+      // //     ul.appendChild(realInput)
+      // //     input.value ='';
+      // // }
+      // button.addEventListener('click', () => {
+      //     let inputVal= input.value
+      //     let realInput= addTask(inputVal)
+      //     ul.appendChild(realInput)
+      //     input.value ='';
+      // })
     </script>
-</body>
+  </body>
 </html>

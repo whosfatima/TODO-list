@@ -4,7 +4,9 @@ let ul = document.querySelector('ul')
 
 let createTask = (text) => {
     let li = document.createElement('li')
-    li.textContent = text
+    let span = document.createElement('span')
+    span.textContent = text
+    li.appendChild(span)
     return li
 }
 // button.onclick= () => {
@@ -15,12 +17,22 @@ let createTask = (text) => {
 // }
 input.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') addTask()
-    })
+})
 
-let addTask= () => {
-    let inputVal = input.value.trim()
-    let realInput = createTask(inputVal)
-    ul.appendChild(realInput)
-    input.value = '';
+let addTask = () => {
+    if (input.value === '') {
+        alert('nope')
+    } else {
+        let inputVal = input.value.trim()
+        let realInput = createTask(inputVal)
+        ul.appendChild(realInput)
+        input.value = '';
+
+    }
+
 }
 button.addEventListener('click', addTask)
+
+input.addEventListener('click', () => {
+    
+})
