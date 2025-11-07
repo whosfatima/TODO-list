@@ -6,6 +6,7 @@ let createTask = (text) => {
     let li = document.createElement('li')
     let span = document.createElement('span')
     span.textContent = text
+    // span.onclick= () => span.classList.toggle('done')
     li.appendChild(span)
     return li
 }
@@ -34,7 +35,15 @@ let addTask = () => {
 
 }
 button.addEventListener('click', addTask)
-
-input.addEventListener('click', () => {
+ul.addEventListener('click', (e) => {
+    // console.log(e.target.nodeName);
+    // console.log(e.target);
+    
+    if (e.target.nodeName === 'I') {
+        e.target.parentElement.parentElement.style.display = ' none'
+    } else if (e.target.nodeName === 'LI') {
+        e.target.parentElement.classList.toggle('done')
+    }
+    // console.log(e.target.parentElement.parentElement);
 
 })

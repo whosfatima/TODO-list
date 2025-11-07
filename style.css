@@ -72,6 +72,7 @@ ul>li>span>i {
 }
 ul >li > .closedBtn:hover > i {
     color: red;
+    /* text-decoration: ; */
 }
 
 
@@ -93,3 +94,8 @@ fieldset > input {
     left: 10px;
 
 } */
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
